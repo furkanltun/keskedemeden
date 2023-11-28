@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <title>Keşke Demeden</title>
+  <meta content="" name="description" />
+  <meta content="" name="keywords" />
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon" />
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet" />
+
+
+  <style>
+    @media (max-width: 480px) {
+      .card-row {
+        flex-direction: column;
+      }
+
+      .card-01,
+      .card-02 {
+        flex: 100%;
+        max-width: 100%;
+        margin: 0 0 10px;
+      }
+    }
+
+    .card-row {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .card-01 {
+      background: #fff;
+      position: relative;
+      flex: 1;
+      max-width: 242px;
+      height: 180px;
+      border-radius: 3px;
+      box-shadow: 0 0 5px rgb(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 10px;
+    }
+
+    .card-02 {
+      background: #fff;
+      position: relative;
+      flex: 1;
+      max-width: 155px;
+      height: 64px;
+      margin: 10px;
+      border-radius: 3px;
+      box-shadow: 0 0 5px rgb(0, 0, 0, 0.2);
+    }
+
+    .card-content {
+      display: flex;
+      align-items: center;
+    }
+
+    .card-image {
+      margin-top: 10px;
+    }
+
+    .card-text {
+      text-align: center;
+    }
+
+    @media (max-width: 800px) {
+      .card-01 {
+        flex: 100%;
+        max-width: 600px;
+      }
+
+      .card-02 {
+        flex: 100%;
+        max-width: 600px;
+      }
+    }
+
+    .circle {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: black;
+      color: white;
+      text-align: center;
+      line-height: 50px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    @media (max-width: 480px) {
+      .card-row {
+        flex-direction: column;
+      }
+
+      .common-card {
+        flex: 100%;
+        max-width: 100%;
+        margin: 0 0 10px;
+        height: 64px;
+        /* Alttaki kartların boyutlarına uygun hale getirildi */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card-row {
+        flex-direction: column;
+      }
+
+      .card-01,
+      .card-02 {
+        flex: 100%;
+        max-width: 100%;
+        margin: 0 0 10px;
+        height: 64px;
+        /* Alttaki kartların boyutlarına uygun hale getirildi */
+      }
+    }
+
+    .testimonial-item p {
+      overflow: hidden;
+      /* Taşan içeriği gizler */
+      display: -webkit-box;
+      -webkit-line-clamp: 7;
+      /* Kartın içinde kaç satır metin gösterileceğini belirler */
+      -webkit-box-orient: vertical;
+      max-height: 350px;
+      /* Kartın maksimum yüksekliği, bu değeri ihtiyacınıza göre ayarlayabilirsiniz */
+    }
+    .clients-slider img {
+  width: 150px; /* Belirlediğiniz genişlik değeri */
+  height: 32px; /* Belirlediğiniz yükseklik değeri */
+}
+  </style>
+
+
+
+</head>
+
+<body>
+
+<!-- ======= Menü ======= -->
+<header id="header" class="header d-flex align-items-center">
+  <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+    <a href="index.html" class="logo d-flex align-items-center">
+      <h1>Keşke Demeden<span>.</span></h1>
+    </a>
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li><a href="/anasayfa.html">Anasayfa</a></li>
+        <li><a href="/hakkımızda.html">Hakkımızda</a></li>
+        <li><a href="/hizmetlerimiz.html">Hizmetlerimiz</a></li>
+        <li><a href="#team">Ekip Arkadaşlarımız</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="#contact">İletişim</a></li>
+      </ul>
+    </nav>
+    <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+    <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+  </div>
+</header>
+<!-- ======= End Menü ======= -->
+
+
+<main id="main">
+  <!-- ======= About Us Section ======= -->
+  <section id="about" class="about">
+    <div class="container" data-aos="fade-up">
+      <div class="section-header">
+        <h2>Biz Kimiz?</h2>
+        <p>
+          Aperiam dolorum et et wuia molestias qui eveniet numquam nihil
+          porro incidunt dolores placeat sunt id nobis omnis tiledo stran
+          delop
+        </p>
+      </div>
+
+      <div class="row gy-4">
+        <div class="col-lg-6">
+          <h3>Sigortada konusunda güvenli dayanağınız</h3>
+          <img src="assets/img/Yusuf Altun portre.jpg" class="img-fluid rounded-4 mb-4" alt="" />
+          <p>
+            Ut fugiat ut sunt quia veniam. Voluptate perferendis
+            perspiciatis quod nisi et. Placeat debitis quia recusandae odit
+            et consequatur voluptatem. Dignissimos pariatur consectetur
+            fugiat voluptas ea.
+          </p>
+          <p>
+            Temporibus nihil enim deserunt sed ea. Provident sit expedita
+            aut cupiditate nihil vitae quo officia vel. Blanditiis eligendi
+            possimus et in cum. Quidem eos ut sint rem veniam qui. Ut ut
+            repellendus nobis tempore doloribus debitis explicabo similique
+            sit. Accusantium sed ut omnis beatae neque deleniti repellendus.
+          </p>
+        </div>
+        <div class="col-lg-6">
+          <div class="content ps-0 ps-lg-5">
+            <p class="fst-italic">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+              do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <ul>
+              <li>
+                <i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi
+                ut aliquip ex ea commodo consequat.
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i> Duis aute irure
+                dolor in reprehenderit in voluptate velit.
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi
+                ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                reprehenderit in voluptate trideta storacalaperda mastiro
+                dolore eu fugiat nulla pariatur.
+              </li>
+            </ul>
+            <p>
+              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+              aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint
+              occaecat cupidatat non proident
+            </p>
+
+            <div class="position-relative mt-4">
+              <img src="assets/img/Bayrak.png" class="img-fluid rounded-4 mb-4" alt="" />
+              <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End About Us Section -->
+
+
+
+
+  <!-- ======= Sigorta Şirketleri Slider ======= -->
+  <section id="clients" class="clients">
+    <div class="container" data-aos="zoom-out">
+      <div class="clients-slider swiper">
+        <div class="swiper-wrapper align-items-center">
+          <div class="swiper-slide">
+            <img src="assets/img/clients/client-1.png" class="img-fluid" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/img/clients/client-2.png" class="img-fluid" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/img/clients/client-3.png" class="img-fluid" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/img/clients/client-4.png" class="img-fluid" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/img/clients/client-5.png" class="img-fluid" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/img/clients/client-6.png" class="img-fluid" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/img/clients/client-7.png" class="img-fluid" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/img/clients/client-8.png" class="img-fluid" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Sigorta Şirketleri Slider -->
+
+
+
+
+
+  <!-- ======= Our Team Section ======= -->
+  <section id="team" class="team">
+    <div class="container" data-aos="fade-up">
+      <div class="section-header">
+        <h2>Ekip Arkadaşlarımız</h2>
+        <p>
+          Nulla dolorum nulla nesciunt rerum facere sed ut inventore quam
+          porro nihil id ratione ea sunt quis dolorem dolore earum
+        </p>
+      </div>
+
+      <div class="row gy-4">
+        <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+          <div class="member">
+            <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="" />
+            <h4>Walter White</h4>
+            <span>Web Development</span>
+          </div>
+        </div>
+        <!-- End Team Member -->
+
+        <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+          <div class="member">
+            <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="" />
+            <h4>Sarah Jhinson</h4>
+            <span>Marketing</span>
+          </div>
+        </div>
+        <!-- End Team Member -->
+
+        <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+          <div class="member">
+            <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="" />
+            <h4>William Anderson</h4>
+            <span>Content</span>
+          </div>
+        </div>
+        <!-- End Team Member -->
+
+        <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
+          <div class="member">
+            <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="" />
+            <h4>Amanda Jepson</h4>
+            <span>Accountant</span>
+          </div>
+        </div>
+        <!-- End Team Member -->
+      </div>
+    </div>
+  </section>
+  <!-- End Our Team Section -->
+
+  <!-- ======= Recent Blog Posts Section ======= -->
+  <section id="recent-posts" class="recent-posts sections-bg">
+    <div class="container" data-aos="fade-up">
+      <div class="section-header">
+        <h2>Daha Fazla Öğren</h2>
+        <p>
+          Hizmet aldığınız bu alanın süreçleri ve size olan katma değerleri
+          ile alakalı bilgileri okumak isteseniz yazılarımıza göz
+          atabillirsiniz
+        </p>
+      </div>
+
+      <div class="row gy-4">
+        <div class="col-xl-4 col-md-6">
+          <article>
+            <div class="post-img">
+              <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid" />
+            </div>
+
+            <p class="post-category">Politics</p>
+
+            <h2 class="title">
+              <a href="blog-details.html">Dolorum optio tempore voluptas dignissimos</a>
+            </h2>
+
+            <div class="d-flex align-items-center">
+              <img src="assets/img/blog/blog-author.jpg" alt="" class="img-fluid post-author-img flex-shrink-0" />
+              <div class="post-meta">
+                <p class="post-author">Maria Doe</p>
+                <p class="post-date">
+                  <time datetime="2022-01-01">Jan 1, 2022</time>
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <!-- End post list item -->
+
+        <div class="col-xl-4 col-md-6">
+          <article>
+            <div class="post-img">
+              <img src="assets/img/blog/blog-2.jpg" alt="" class="img-fluid" />
+            </div>
+
+            <p class="post-category">Sports</p>
+
+            <h2 class="title">
+              <a href="blog-details.html">Nisi magni odit consequatur autem nulla dolorem</a>
+            </h2>
+
+            <div class="d-flex align-items-center">
+              <img src="assets/img/blog/blog-author-2.jpg" alt="" class="img-fluid post-author-img flex-shrink-0" />
+              <div class="post-meta">
+                <p class="post-author">Allisa Mayer</p>
+                <p class="post-date">
+                  <time datetime="2022-01-01">Jun 5, 2022</time>
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <!-- End post list item -->
+
+        <div class="col-xl-4 col-md-6">
+          <article>
+            <div class="post-img">
+              <img src="assets/img/blog/blog-3.jpg" alt="" class="img-fluid" />
+            </div>
+
+            <p class="post-category">Entertainment</p>
+
+            <h2 class="title">
+              <a href="blog-details.html">Possimus soluta ut id suscipit ea ut in quo quia et
+                soluta</a>
+            </h2>
+
+            <div class="d-flex align-items-center">
+              <img src="assets/img/blog/blog-author-3.jpg" alt="" class="img-fluid post-author-img flex-shrink-0" />
+              <div class="post-meta">
+                <p class="post-author">Mark Dower</p>
+                <p class="post-date">
+                  <time datetime="2022-01-01">Jun 22, 2022</time>
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <!-- End post list item -->
+      </div>
+      <!-- End recent posts list -->
+    </div>
+  </section>
+  <!-- End Recent Blog Posts Section -->
+
+  <!-- ======= Contact Section ======= -->
+  <section id="contact" class="contact">
+    <div class="container" data-aos="fade-up">
+      <div class="section-header">
+        <h2>İletişim</h2>
+        <p>
+          Bize çalışma saatlerimiz içerisinde istediğiniz her zaman
+          ulaşabilirsiniz
+        </p>
+      </div>
+
+      <div class="row gx-lg-0 gy-4">
+        <div class="col-lg-4">
+          <div class="info-container d-flex flex-column align-items-center justify-content-center">
+            <div class="info-item d-flex">
+              <i class="bi bi-geo-alt flex-shrink-0"></i>
+              <div>
+                <h4>Adres:</h4>
+                <p>Merkez Mah. İstanbul Cad. No 12 Kat 4 Ofis 33</p>
+              </div>
+            </div>
+            <!-- End Info Item -->
+
+            <div class="info-item d-flex">
+              <i class="bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h4>E-Posta:</h4>
+                <p>sigorta@keskedemeden.com</p>
+              </div>
+            </div>
+            <!-- End Info Item -->
+
+            <div class="info-item d-flex">
+              <i class="bi bi-phone flex-shrink-0"></i>
+              <div>
+                <h4>Telefon Numaramız:</h4>
+                <p>+90 506 141 56 61</p>
+              </div>
+            </div>
+            <!-- End Info Item -->
+
+            <div class="info-item d-flex">
+              <i class="bi bi-clock flex-shrink-0"></i>
+              <div>
+                <h4>Çalışma Saatlerimiz:</h4>
+                <p>Hafta İçi Her gün 09.00 - 20.00</p>
+              </div>
+            </div>
+            <!-- End Info Item -->
+          </div>
+        </div>
+
+        <div class="col-lg-8">
+          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="İsim Soyisim" required />
+              </div>
+              <div class="col-md-6 form-group mt-3 mt-md-0">
+                <input type="email" class="form-control" name="email" id="email" placeholder="E-Posta adresiniz"
+                  required />
+              </div>
+            </div>
+            <div class="form-group mt-3">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Sigorta Türünüz"
+                required />
+            </div>
+            <div class="form-group mt-3">
+              <textarea class="form-control" name="message" rows="7" placeholder="Sorunuz" required></textarea>
+            </div>
+            <div class="my-3">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">
+                Your message has been sent. Thank you!
+              </div>
+            </div>
+            <div class="text-center">
+              <button type="submit">Mesaj Gönder</button>
+            </div>
+          </form>
+        </div>
+        <!-- End Contact Form -->
+      </div>
+    </div>
+  </section>
+  <!-- End Contact Section -->
+</main>
+
+
+ <!-- ======= Footer ======= -->
+ <footer id="footer" class="footer">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-lg-5 col-md-12 footer-info">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <span>Keske Demeden</span>
+        </a>
+        <p>
+          Cras fermentum odio eu feugiat lide par naso tierra. Justo eget
+          nada terra videa magna derita valies darta donna mare fermentum
+          iaculis eu non diam phasellus.
+        </p>
+        <div class="social-links d-flex mt-4">
+          <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-6 footer-links">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Terms of service</a></li>
+          <li><a href="#">Privacy policy</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-2 col-6 footer-links">
+        <h4>Hizmetlerimiz</h4>
+        <ul>
+          <li><a href="#">Web Design</a></li>
+          <li><a href="#">Web Development</a></li>
+          <li><a href="#">Product Management</a></li>
+          <li><a href="#">Marketing</a></li>
+          <li><a href="#">Graphic Design</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+        <h4>Contact Us</h4>
+        <p>
+          A108 Adam Street <br />
+          New York, NY 535022<br />
+          United States <br /><br />
+          <strong>Phone:</strong> +1 5589 55488 55<br />
+          <strong>Email:</strong> info@example.com<br />
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-4">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Impact</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/impact-bootstrap-business-website-template/ -->
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+  </div>
+</footer>
+<!-- End Footer -->
+
+
+<!-- ======= Açılış Animasyonu ======= -->
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+    class="bi bi-arrow-up-short"></i></a>
+<div id="preloader"></div>
+<!-- End Açılış Animasyonu -->
+
+
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+
+
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
