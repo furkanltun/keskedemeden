@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <title>Keşke Demeden</title>
+  <meta content="" name="description" />
+  <meta content="" name="keywords" />
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon" />
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet" />
+
+
+  <style>
+    .card-row {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      /* Kartları yatayda ortala */
+    }
+
+    .card-01 {
+      background: #fff;
+      position: relative;
+      flex: 1;
+      max-width: 250px;
+      height: 190px;
+      border-radius: 3px;
+      box-shadow: 0 0 5px rgb(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 10px;
+    }
+
+    .card-01 .card-image img {
+      margin: auto;
+      /* Resmi hem yatayda hem dikeyde ortala */
+      display: block;
+    }
+
+    .card-01 .card-text {
+      text-align: center;
+    }
+
+    @media (max-width: 480px) {
+      .card-row {
+        flex-direction: column;
+      }
+
+      .common-card {
+        flex: 1;
+        max-width: calc(50% - 20px);
+        margin: 0 0 10px;
+        height: 190px;
+        /* Ya da istediğiniz bir yükseklik değeri */
+      }
+    }
+
+    .card-row {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .card-01 {
+      background: #fff;
+      position: relative;
+      flex: 1;
+      max-width: 250px;
+      height: 190px;
+      border-radius: 3px;
+      box-shadow: 0 0 5px rgb(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 10px;
+    }
+
+    .card-02 {
+      background: #fff;
+      position: relative;
+      flex: 1;
+      max-width: 160px;
+      height: 68px;
+      margin: 10px;
+      border-radius: 3px;
+      box-shadow: 0 0 5px rgb(0, 0, 0, 0.2);
+    }
+
+    .card-content {
+      display: flex;
+      align-items: center;
+    }
+
+    .card-image {
+      margin-top: 10px;
+    }
+
+    .card-text {
+      text-align: center;
+    }
+
+    @media (max-width: 800px) {
+      .card-01 {
+        flex: 100%;
+        max-width: 600px;
+      }
+
+      .card-02 {
+        flex: 100%;
+        max-width: 600px;
+      }
+    }
+
+    .circle {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: black;
+      color: white;
+      text-align: center;
+      line-height: 50px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    @media (max-width: 480px) {
+      .card-row {
+        flex-direction: column;
+      }
+
+      .common-card {
+        flex: 100%;
+        max-width: 100%;
+        margin: 0 0 10px;
+        height: 64px;
+        /* Alttaki kartların boyutlarına uygun hale getirildi */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card-row {
+        flex-direction: column;
+      }
+
+      .card-01,
+      .card-02 {
+        flex: 100%;
+        max-width: 100%;
+        margin: 0 0 10px;
+        height: 64px;
+        /* Alttaki kartların boyutlarına uygun hale getirildi */
+      }
+    }
+
+    .testimonial-item p {
+      overflow: hidden;
+      /* Taşan içeriği gizler */
+      display: -webkit-box;
+      -webkit-line-clamp: 7;
+      /* Kartın içinde kaç satır metin gösterileceğini belirler */
+      -webkit-box-orient: vertical;
+      max-height: 350px;
+      /* Kartın maksimum yüksekliği, bu değeri ihtiyacınıza göre ayarlayabilirsiniz */
+    }
+
+    .clients-slider img {
+      width: 150px;
+      /* Belirlediğiniz genişlik değeri */
+      height: 32px;
+      /* Belirlediğiniz yükseklik değeri */
+    }
+
+
+    .custom-p {
+      font-size: 20pt;
+      text-align: center;
+      color: #1D1E1E;
+
+    }
+
+    .img-container {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .custom-img {
+      width: 570px;
+      height: 250px;
+    }
+  </style>
+
+
+
+</head>
+
+<body>
+
+
+  <!-- ======= Menü ======= -->
+  <header id="header" class="header d-flex align-items-center">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="anasayfa.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.svg" alt="Resim" width="50" height="50">
+        <h1>keskedemeden.com</h1>
+      </a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="/anasayfa.html">Anasayfa</a></li>
+          <li><a href="/hakkımızda.html">Hakkımızda</a></li>
+          <li><a href="/hizmetlerimiz.html">Hizmetlerimiz</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="iletişim.html">İletişim</a></li>
+        </ul>
+      </nav>
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    </div>
+  </header>
+  <!-- ======= End Menü ======= -->
+
+
+
+  <!-- ======= Header ======= -->
+  <section id="hero" class="hero">
+    <div class="container position-relative">
+      <div class="row gy-5" data-aos="fade-in">
+        <!-- Sol Alan -->
+
+        <!-- Sol Alan -->
+        
+        <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-lg-start">
+         
+          <div class="row justify-content-center mt-4">
+            <p style="font-size: 16px; font-weight: bold;">Keşke demeden önce...</p>
+            <div class="containerR">
+              <div class="card-row">
+                <div class="common-card card-01">
+                  <div class="card-image">
+                    <img src="assets/img/kasko.svg" alt="Resim" width="100" height="100">
+                  </div>
+                  <div class="card-text">
+                    <p style="font-size: 16px; font-weight: bold;">Kasko</p>
+                  </div>
+                </div>
+                <div class="common-card card-01">
+                  <div class="card-image">
+                    <img src="assets/img/dask.svg" alt="Resim" width="100" height="100">
+                  </div>
+                  <div class="card-text">
+                    <p style="font-size: 16px; font-weight: bold; ">Dask</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-row">
+                <div class="common-card card-02">
+                  <div class="card-content">
+                    <div class="card-image">
+                      <img src="assets/img/trafik.svg" alt="Resim" width="55" height="55"
+                        style="margin-left: 15px; margin-right: 10px; margin-bottom: 10px;">
+                    </div>
+                    <div class="card-text">
+                      <p style="font-size: 14px; font-weight: bold;  margin-top: 20px;">Trafik</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="common-card card-02">
+                  <div class="card-content">
+                    <div class="card-image">
+                      <img src="assets/img/saglik.svg" alt="Resim" width="55" height="55" style="margin-left: 15px; ">
+                    </div>
+                    <div class="card-text">
+                      <p style="font-size: 12px; font-weight: bold; margin-left: px;  margin-top: 22px;">Tamamlayıcı Sağlık</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="common-card card-02">
+                  <div class="card-content">
+                    <div class="card-image">
+                      <img src="assets/img/isyeri.svg" alt="Resim" width="50" height="50"
+                        style="margin-left: 15px; margin-right: 5px; margin-bottom: 5px;">
+                    </div>
+                    <div class="card-text">
+                      <p style="font-size: 12px; margin-left: 10px; font-weight: bold;  margin-top: 20px;">İş Yeri</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-row">
+                <div class="common-card card-02">
+                  <div class="card-content">
+                    <div class="card-image">
+                      <img src="assets/img/seyahat.svg" alt="Resim" width="55" height="55" style="margin-left: 15px; ">
+                    </div>
+                    <div class="card-text">
+                      <p style="font-size: 12px; font-weight: bold;  margin-right: 15px; margin-top: 20px;">Seyahat</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="common-card card-02">
+                  <div class="card-content">
+                    <div class="card-image">
+                      <img src="assets/img/ösaglik.svg" alt="Resim" width="42" height="42" style="margin-left: 15px; ">
+                    </div>
+                    <div class="card-text">
+                      <p style="font-size: 12px; margin-left: 10px; font-weight: bold;  margin-top: 25px;">Özel Sağlık
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="common-card card-02">
+                  <div class="card-content">
+                    <div class="card-image">
+                      <img src="assets/img/all.svg" alt="Resim" width="30" height="30"
+                        style="margin-left: 15px;margin-top: 10px;margin-bottom: 15px; margin-right: 10px; ">
+                    </div>
+                    <div class="card-text">
+                      <p style="font-size: 12px; font-weight: bold; margin-left: 10px;  margin-top: 20px;">Hepsini gör
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+        <!-- ======= Header-SOL ======= -->
+
+
+
+
+        <!-- ======= Header-SAĞ ======= -->
+        <div class="col-lg-6 order-1 order-lg-2">
+          <p class="custom-p">
+            KALİTELİ TEMİNATLAR VE CAZİP FİYATLARLA
+          </p>
+          <div style="position: relative;">
+            <p class="custom-p" style="margin-bottom: 6px; z-index: 1; position: relative;">
+              RİSKLERİNİZİ <span style="font-weight: bold; color: #FAC428;">GÜVENCE</span> ALTINA ALIN!
+            </p>
+          </div>
+          <div class="img-container">
+            <img src="assets/img/home_banner.svg" class="img-fluid custom-img " style="margin-bottom: 50px;" alt=""
+              data-aos="zoom-out" data-aos-delay="100" />
+          </div>
+        </div>
+
+
+
+        <!-- ======= Header-SAĞ ======= -->
+
+
+      </div>
+    </div>
+  </section>
+  <!-- ======= End Header ======= -->
+
+<div class="container mt-5">
+  <div class="row">
+    <!-- Kart 1 -->
+    <div class="col-md-4">
+      <div class="card" style="border: none;">
+        <div class="card-body text-center">
+          <img src="assets/img/policy-trustworthy.svg" alt="Resim" width="90" height="90">
+          <p style="font-size: 20px; font-weight: bold ;">Doğru Ürün</p>
+          <p style="font-size: 15px; color:#1D1E1E ;">Yenilenen yapay zekâmızla, onlarca sigorta teklifi arasından ucuzunu, sana uygununu ve kapsamlısını buluyoruz. Net teminatlar ve net fiyatlarla kararın hep net olsun.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kart 2 -->
+    <div class="col-md-4">
+      <div class="card" style="border: none;" >
+        <div class="card-body text-center">
+          <img src="assets/img/policy-price.svg" alt="Resim" width="90" height="90">
+          <p style="font-size: 20px; font-weight: bold ;">İyi Fiyat
+          </p>
+          <p style="font-size: 15px; color:#1D1E1E ;">Önceliğimiz her zaman sensin. Çalıştığımız tüm şirketlerde bütçeni düşünerek “en iyi fiyat garantisi” sunuyoruz.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kart 3 -->
+    <div class="col-md-4">
+      <div class="card" style="border: none;">
+        <div class="card-body text-center">
+          <img src="assets/img/policy-with-you.svg" alt="Resim" width="90" height="90">
+          <p style="font-size: 20px; font-weight: bold ;">7/24 Hizmet
+          </p>
+          <p style="font-size: 15px; color:#1D1E1E ;">24 yıllık tecrübemiz ve uzman sigorta danışmanlarımızla 7/24 her ihtiyacında yanındayız. Üstelik hasar anında saniyeler içinde bize ulaşabilirsin.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  <!-- ======= Sigorta Şirketleri Slider ======= -->
+
+  <!-- <section id="clients" class="clients">
+    <div class="container" data-aos="zoom-out">
+      <div class="clients-slider swiper">
+        <div class="swiper-wrapper align-items-center">
+          <div class="swiper-slide">
+            <img src="assets/img/clients/client-1.png" class="img-fluid" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/img/clients/client-2.png" class="img-fluid" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/img/clients/client-3.png" class="img-fluid" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/img/clients/client-4.png" class="img-fluid" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/img/clients/client-6.png" class="img-fluid" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/img/clients/client-7.png" class="img-fluid" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/img/clients/client-8.png" class="img-fluid" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- End Sigorta Şirketleri Slider -->
+
+  <div class="top-content">
+    <div class="container">
+        <!-- Title and description row -->
+        <div class="row">
+            <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+                <h1>Carousel Template with Videos</h1>
+                <div class="description">
+                    <p>
+                        This is a free Carousel template with Videos made with the Bootstrap 4 framework. 
+                        Click on the indicators, controls and links to interact with the page.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- End title and description row -->
+        <!-- Carousel row -->
+        <div class="row">
+            <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+                <!-- Carousel -->
+                <div id="carousel-example" class="carousel slide">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example" data-slide-to="1"></li>
+                        <li data-target="#carousel-example" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/6hgVihWjK2c?rel=0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/84910153?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=ffffff" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/oiKj0Z_Xnjc" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <!-- End carousel -->
+            </div>
+        </div>
+        <!-- End carousel row -->
+    </div>
+</div>
+
+  <!-- ======= Değerlendirmeler ======= -->
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+
+      <div style="text-align: center;">
+        <h2 style="font-weight: bold;">Yorumlarınızla Motive Oluyoruz <br class="hidden-lg-up">Teşekkür ederiz</h2>
+        <br>
+      </div>
+      <div class="slides-3 swiper" data-aos-delay="100">
+
+        <div class="swiper-wrapper">
+
+
+          <!-- Start testimonial item -->
+          <div class="swiper-slide">
+
+            <div class="testimonial-wrap">
+
+              <div class="testimonial-item">
+                <div class="d-flex align-items-center">
+                  <div>
+                    <h3>Ali C.</h3>
+                    <div class="stars">
+                      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  Geniş kapsamlı teminatlarınız beni gerçekten memnun etti. Geçtiğimiz yıl evimiz sel felaketine maruz
+                  kaldı ve büyük bir hasar gördü. Sigorta poliçemiz zararımızın önemli bir bölümünü karşıladı.
+                  Çalışanlarınız her adımda bize inanılmaz yardımcı oldu ve sürecin sorunsuz ilerlemesini sağladı. Bu
+                  destek için içtenlikle teşekkür ederim! Size verdiğiniz değerli desteğiniz için minnettarım!<i
+                    class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- End testimonial item -->
+
+
+
+          <!-- Start testimonial item -->
+          <div class="swiper-slide">
+
+            <div class="testimonial-wrap">
+
+              <div class="testimonial-item">
+                <div class="d-flex align-items-center">
+                  <div>
+                    <h3>Ayşe Y.</h3>
+                    <div class="stars">
+                      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  Sigorta poliçemiz, evimizi geçen yıl etkileyen sel felaketinde bize büyük bir yardım sağladı.
+                  Hasarımızın önemli bir kısmını karşıladılar ve sürecin sorunsuz geçmesini sağlamak için ellerinden
+                  gelenin en iyisini yaptılar. Çalışanlarınızın samimiyeti ve yardımseverliği için teşekkür ederim.
+                  Gerçekten güvende hissetmemizi sağladınız!<i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- End testimonial item -->
+
+
+
+          <!-- Start testimonial item -->
+          <div class="swiper-slide">
+
+            <div class="testimonial-wrap">
+
+              <div class="testimonial-item">
+                <div class="d-flex align-items-center">
+                  <div>
+                    <h3>Mehmet K.</h3>
+                    <div class="stars">
+                      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  Sigorta acentenizle çalışmak gerçekten harika bir deneyimdi. Evimizdeki sel felaketi sonrasında,
+                  poliçemiz sayesinde büyük bir maddi yükten kurtulduk. Çalışanlarınızın samimi tutumu ve hızlı
+                  çözümleri sayesinde, zararımızın çoğunu telafi ettik. Herkese güvenilir bir sigorta acentesi arıyorsa
+                  sizi öneririm<i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- End testimonial item -->
+
+          <!-- Start testimonial item -->
+          <div class="swiper-slide">
+
+            <div class="testimonial-wrap">
+
+              <div class="testimonial-item">
+                <div class="d-flex align-items-center">
+                  <div>
+                    <h3>Zeynep A.</h3>
+                    <div class="stars">
+                      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  Sigorta acentenizin sağladığı geniş kapsamlı teminatlar gerçekten etkileyici. Evimizdeki sel
+                  felaketinden sonra, poliçemiz bize beklenmedik masraflarla başa çıkma konusunda büyük bir yardım
+                  sağladı. Çalışanlarınızın ilgi ve alakası sayesinde, süreç hiçbir sıkıntı yaşamadan tamamlandı.
+                  Teşekkür ederim!<i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- End testimonial item -->
+
+
+          <!-- Start testimonial item -->
+          <div class="swiper-slide">
+
+            <div class="testimonial-wrap">
+
+              <div class="testimonial-item">
+                <div class="d-flex align-items-center">
+                  <div>
+                    <h3>Ali D.</h3>
+                    <div class="stars">
+                      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  Sigorta acentenizle çalışmaktan dolayı gerçekten memnunum. Geçen yıl yaşadığımız sel felaketinde,
+                  poliçemiz sayesinde evimizde meydana gelen hasarı karşılamak konusunda bize büyük bir destek verdiniz.
+                  Hızlı ve etkili çözümleriniz için teşekkür ederim. Güvenilir bir sigorta acentesi arayan herkese sizi
+                  öneririm!
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- End testimonial item -->
+
+          <!-- Start testimonial item -->
+          <div class="swiper-slide">
+
+            <div class="testimonial-wrap">
+
+              <div class="testimonial-item">
+                <div class="d-flex align-items-center">
+                  <div>
+                    <h3>Sevgi T.</h3>
+                    <div class="stars">
+                      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>Sigorta acentenizle çalışmak bana gerçek bir güvence hissi
+                  veriyor. Sel felaketinde evimizin hasar görmesiyle karşılaştık ve poliçemizin kapsamı sayesinde
+                  zararımızın büyük bir kısmını karşılayabildik. Çalışanlarınızın samimi yaklaşımı ve yardımseverliği
+                  için teşekkür ederim. Herkese gönül rahatlığıyla tavsiye ederim!<i
+                    class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- End testimonial item -->
+
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+      </div>
+
+    </div>
+  </section>
+  <!-- End Değerlendirmeler -->
+
+
+  <section id="testimonials" class="testimonials hero">
+    <div class="container">
+  <div style="text-align: center;">
+    <h2 style="font-weight: bold;">20’den fazla sigorta şirketinden 
+      <br class="hidden-lg-up">teklif al</h2>
+    <br>
+  </div>
+
+  <div class="col-lg-12 order-3 order-lg-1 d-flex flex-column justify-content-center text-lg-start">
+         
+    <div class="row justify-content-center mt-4">
+      <div class="containerR">
+       
+        <div class="card-row">
+         
+         
+          <div class="common-card card-01">
+            <div class="card-image">
+              <img src="assets/img/kasko.svg" style="filter: grayscale(100%);"alt="Resim" width="100" height="100">
+            </div>
+          </div>
+         
+          <div class="common-card card-01">
+            <div class="card-image">
+              <img src="assets/img/kasko.svg" style="filter: grayscale(100%);"alt="Resim" width="100" height="100">
+            </div>
+          </div>
+         
+         
+          <div class="common-card card-01">
+            <div class="card-image">
+              <img src="assets/img/kasko.svg"style="filter: grayscale(100%);" alt="Resim" width="100" height="100">
+            </div>
+          </div>
+         
+         
+          <div class="common-card card-01">
+            <div class="card-image">
+              <img src="assets/img/kasko.svg" style="filter: grayscale(100%);"alt="Resim" width="100" height="100">
+            </div>
+          </div>
+       
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-lg-12 order-3 order-lg-1 d-flex flex-column justify-content-center text-lg-start">
+         
+    <div class="row justify-content-center mt-4">
+      <div class="containerR">
+       
+        <div class="card-row">
+         
+         
+          <div class="common-card card-01">
+            <div class="card-image">
+              <img src="assets/img/kasko.svg" style="filter: grayscale(100%);" alt="Resim" width="100" height="100">
+            </div>
+          </div>
+         
+          <div class="common-card card-01">
+            <div class="card-image">
+              <img src="assets/img/kasko.svg"style="filter: grayscale(100%);" alt="Resim" width="100" height="100">
+            </div>
+          </div>
+         
+         
+          <div class="common-card card-01">
+            <div class="card-image">
+              <img src="assets/img/kasko.svg" style="filter: grayscale(100%);" alt="Resim" width="100" height="100">
+            </div>
+          </div>
+         
+         
+          <div class="common-card card-01">
+            <div class="card-image">
+              <img src="assets/img/kasko.svg" style="filter: grayscale(100%);"alt="Resim" width="100" height="100">
+            </div>
+          </div>
+       
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-lg-12 order-3 order-lg-1 d-flex flex-column justify-content-center text-lg-start">
+         
+    <div class="row justify-content-center mt-4">
+      <div class="containerR">
+       
+        <div class="card-row">
+         
+         
+          <div class="common-card card-01">
+            <div class="card-image">
+              <img src="assets/img/kasko.svg" style="filter: grayscale(100%);"alt="Resim" width="100" height="100">
+            </div>
+          </div>
+         
+          <div class="common-card card-01">
+            <div class="card-image">
+              <img src="assets/img/kasko.svg" style="filter: grayscale(100%);"alt="Resim" width="100" height="100">
+            </div>
+          </div>
+         
+         
+          <div class="common-card card-01">
+            <div class="card-image">
+              <img src="assets/img/kasko.svg"style="filter: grayscale(100%);" alt="Resim" width="100" height="100">
+            </div>
+          </div>
+         
+         
+          <div class="common-card card-01">
+            <div class="card-image">
+              <img src="assets/img/kasko.svg" style="filter: grayscale(100%);"alt="Resim" width="100" height="100">
+            </div>
+          </div>
+       
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+  </section>
+
+  <!-- ======= Sıkça Sorulan Sorular ======= -->
+  <section id="faq" class="faq">
+    <div class="container" data-aos="fade-up">
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <div class="content px-xl-5">
+            <h3>Sıkça Sorulan <strong>Sorular</strong></h3>
+            <p>
+              Sıkça Sorulan Sorular bölümü, müşterilerimizin sigorta konusundaki sıkça karşılaşılan soruların
+              cevaplarını bulabilecekleri bir kaynaktır. Bu bölüm, sigorta süreci, poliçe seçenekleri, prim ödemeleri ve
+              hasar talepleri gibi konularda bilgilendirme sağlar.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-8">
+          <div class="accordion accordion-flush" id="faqlist" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq-content-1">
+                  <span class="num">1.</span>
+                  Sigorta nedir ve neden önemlidir?
+                </button>
+              </h3>
+              <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                <div class="accordion-body">
+                  Sigorta, beklenmedik risklere karşı maddi koruma sağlayan bir tür sözleşmedir. Bir sigorta poliçesi
+                  satın aldığınızda, sigorta şirketi beklenmedik olaylar sonucunda ortaya çıkabilecek zararları
+                  karşılamayı taahhüt eder. Örneğin, arabanızı sigortalatırsanız, bir kaza durumunda sigorta şirketi
+                  araçtaki hasarı karşılayabilir. Sigorta, finansal güvenlik sağlamak için önemlidir çünkü beklenmedik
+                  olaylar yaşandığında büyük mali yüklerle karşılaşmayı önler.
+                  non.
+                </div>
+              </div>
+            </div>
+            <!-- # Faq item-->
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq-content-2">
+                  <span class="num">2.</span>
+                  Hangi sigorta türleri mevcuttur?
+                </button>
+              </h3>
+              <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                <div class="accordion-body">
+                  Türkiye'de yaygın olarak kullanılan sigorta türleri şunlardır:
+                  <ul>
+                    <li>Trafik Sigortası: Zorunlu olan bu sigorta, araçların neden olduğu maddi hasarları karşılar.</li>
+                    <li>Kasko Sigortası: Kasko, aracınızdaki çeşitli risklere karşı koruma sağlar, örneğin hırsızlık,
+                      yangın, kaza, doğal afetler vb.</li>
+                    <li>Konut Sigortası: Ev sahiplerine, evde oluşabilecek zararları (yangın, hırsızlık, su baskını vb.)
+                      karşılamak için maddi koruma sağlar.</li>
+                    <li>Seyahat Sigortası: Yurt içi veya yurt dışı seyahatlerde oluşabilecek sağlık sorunları, bagaj
+                      kaybı veya iptal durumlarına karşı koruma sağlar.</li>
+
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+            <!-- # Faq item-->
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq-content-3">
+                  <span class="num">3.</span>
+                  Sigorta poliçeleri nasıl çalışır?
+                </button>
+              </h3>
+              <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                <div class="accordion-body">
+                  Sigorta poliçeleri, sigorta şirketi ve poliçe sahibi (sigortalı) arasında bir sözleşme niteliği taşır.
+                  Sigorta şirketi, poliçe sahibinin belirli bir prim ödemesi karşılığında,
+                  belirtilen risklere karşı maddi koruma sağlar.
+                  Eğer bir zarar meydana gelirse, sigortalı bu zararı sigorta şirketine bildirir ve gerekli belgeleri
+                  sunar.
+                  Sigorta şirketi, poliçe kapsamındaki koşullara göre zararı değerlendirir ve uygun görürse tazminat
+                  öder.
+                </div>
+              </div>
+            </div>
+            <!-- # Faq item-->
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq-content-4">
+                  <span class="num">4.</span>
+                  Sigorta primi nedir ve nasıl hesaplanır?
+                </button>
+              </h3>
+              <div id="faq-content-4" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                <div class="accordion-body">
+                  Sigorta primi,
+                  sigorta poliçesinin maliyetini ifade eder ve poliçe sahibinin belirli aralıklarla ödediği bir
+                  tutardır.
+                  Sigorta primi, birkaç faktöre bağlı olarak hesaplanır.
+                  Örneğin, araç sigortası için prim, aracın değeri, kullanım amacı, sürücünün tecrübesi,
+                  yaşadığı bölge vb. gibi faktörlere göre belirlenebilir. Sigorta şirketleri,
+                  riski değerlendirmek için bu faktörleri kullanır ve poliçe sahibine uygun bir prim teklifi sunar.
+                </div>
+              </div>
+            </div>
+            <!-- # Faq item-->
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq-content-5">
+                  <span class="num">5.</span>
+                  Sigorta poliçesi satın alırken nelere dikkat etmeliyim?
+                </button>
+              </h3>
+              <div id="faq-content-5" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                <div class="accordion-body">
+                  Sigorta poliçesi satın alırken aşağıdaki konulara dikkat etmek önemlidir:
+                  <ul>
+                    <li>Poliçe kapsamı: Sigorta poliçesinin neleri kapsadığını ve hangi durumları karşıladığını
+                      dikkatlice okuyun. Belirli risklerin kapsam dışında olduğu durumlar olabilir.</li>
+                    <li>Prim ve ödeme koşulları: Prim tutarını ve ödeme koşullarını anlayın. Prim ödemelerinin ne zaman
+                      ve nasıl yapılacağını belirlemek önemlidir.</li>
+                    <li>Sigorta şirketinin itibarı: Sigorta şirketinin güvenilirliğini araştırın. Şirketin müşteri
+                      hizmetleri, tazminat süreçleri ve müşteri memnuniyeti gibi faktörleri değerlendirin</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- # Faq item-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Sıkça Sorulan Sorular -->
+  </div>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-info">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span>Keske Demeden</span>
+          </a>
+          <p>
+            Cras fermentum odio eu feugiat lide par naso tierra. Justo eget
+            nada terra videa magna derita valies darta donna mare fermentum
+            iaculis eu non diam phasellus.
+          </p>
+          <div class="social-links d-flex mt-4">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Hizmetlerimiz</h4>
+          <ul>
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Product Management</a></li>
+            <li><a href="#">Marketing</a></li>
+            <li><a href="#">Graphic Design</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>
+            A108 Adam Street <br />
+            New York, NY 535022<br />
+            United States <br /><br />
+            <strong>Phone:</strong> +1 5589 55488 55<br />
+            <strong>Email:</strong> info@example.com<br />
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Impact</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/impact-bootstrap-business-website-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+
+  <!-- ======= Açılış Animasyonu ======= -->
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+  <!-- End Açılış Animasyonu -->
+
+
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
