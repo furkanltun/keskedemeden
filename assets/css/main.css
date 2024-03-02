@@ -39,7 +39,7 @@ a {
 }
 
 a:hover {
-  color: #574CFA;
+  color: #47539F;
   text-decoration: none;
 }
 
@@ -275,7 +275,7 @@ section {
   display: block;
   width: 50px;
   height: 3px;
-  background: #574CFA;
+  background: #47539F;
   left: 0;
   right: 0;
   bottom: 0;
@@ -309,7 +309,7 @@ section {
 }
 
 .breadcrumbs nav {
-  background-color: #574CFA;
+  background-color: #47539F;
   padding: 20px 0;
 }
 
@@ -340,7 +340,7 @@ section {
 .breadcrumbs nav ol li+li::before {
   display: inline-block;
   padding-right: 10px;
-  color: #574CFA;
+  color: #47539F;
   content: "/";
 }
 
@@ -354,7 +354,7 @@ section {
   right: 15px;
   bottom: -15px;
   z-index: 99999;
-  background: #574cfa;
+  background: #47539F;
   width: 44px;
   height: 44px;
   border-radius: 50px;
@@ -396,7 +396,7 @@ section {
   top: calc(50% - 30px);
   left: calc(50% - 30px);
   border: 6px solid #fff;
-  border-color: #574cfa transparent;
+  border-color: #47539F transparent;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -426,7 +426,7 @@ section {
 # Header
 --------------------------------------------------------------*/
 .topbar {
-  background: #00796b;
+  background: #47539F;
   height: 40px;
   font-size: 14px;
   transition: all 0.5s;
@@ -506,7 +506,7 @@ section {
 }
 
 .header .logo h1 span {
-  color: #574cfafc;
+  color: #47539F;
 }
 
 .sticked-header-offset {
@@ -571,7 +571,7 @@ section {
     height: 2px;
     bottom: -6px;
     left: 0;
-    background-color: #574CFA;
+    background-color: #47539F;
     visibility: hidden;
     width: 0px;
     transition: all 0.3s ease-in-out 0s;
@@ -616,7 +616,7 @@ section {
     font-size: 15px;
     text-transform: none;
     font-weight: 600;
-    color: #006a5d;
+    color: #47539F;
   }
 
   .navbar .dropdown ul a i {
@@ -626,7 +626,7 @@ section {
   .navbar .dropdown ul a:hover,
   .navbar .dropdown ul .active:hover,
   .navbar .dropdown ul li:hover>a {
-    color: #574CFA;
+    color: #47539F;
   }
 
   .navbar .dropdown:hover>ul {
@@ -718,7 +718,7 @@ section {
   .navbar .active,
   .navbar .active:focus,
   .navbar li:hover>a {
-    color: #574CFA;
+    color: #47539F;
   }
 
   .navbar .getstarted,
@@ -727,12 +727,12 @@ section {
     padding: 8px 20px;
     border-radius: 4px;
     margin: 15px;
-    color: #574CFA;
+    color: #47539F;
   }
 
   .navbar .getstarted:hover,
   .navbar .getstarted:focus:hover {
-    color: #574CFA;
+    color: #47539F;
     background: rgba(0, 131, 116, 0.8);
   }
 
@@ -838,7 +838,7 @@ section {
   font-size: 20px;
   left: 0;
   top: -3px;
-  color: #574CFA;
+  color: #47539F;
 }
 
 .about .content p:last-child {
@@ -848,7 +848,7 @@ section {
 .about .play-btn {
   width: 94px;
   height: 94px;
-  background: radial-gradient(#574CFA 50%, rgba(100,89,255) 52%);
+  background: radial-gradient(#47539F 50%, rgba(100,89,255) 52%);
   border-radius: 50%;
   display: block;
   position: absolute;
@@ -987,7 +987,7 @@ section {
   font-size: 40px;
   display: block;
   font-weight: 700;
-  color: #574CFA;
+  color: #47539F;
   line-height: 40px;
 }
 
@@ -1037,7 +1037,7 @@ section {
   width: 94px;
   height: 94px;
   margin-bottom: 20px;
-  background: radial-gradient(#574CFA 50%, rgba(100, 89, 200, 0.7) 52%);
+  background: radial-gradient(#47539F 50%, rgba(100, 89, 200, 0.7) 52%);
   border-radius: 50%;
   display: inline-block;
   position: relative;
@@ -1114,8 +1114,8 @@ section {
 }
 
 .call-to-action .cta-btn:hover {
-  background: #574CFA;
-  border: 2px solid #574CFA;
+  background: #47539F;
+  border: 2px solid #47539F;
 }
 
 @keyframes pulsate-btn {
@@ -1152,7 +1152,7 @@ section {
 }
 
 .services .service-item .icon i {
-  color: #574CFA;
+  color: #47539F;
   font-size: 56px;
   transition: ease-in-out 0.3s;
   z-index: 2;
@@ -1193,7 +1193,7 @@ section {
 .services .service-item .readmore {
   margin-top: 15px;
   display: inline-block;
-  color: #574CFA;
+  color: #47539F;
 }
 
 .services .service-item:hover h3 {
@@ -1247,7 +1247,7 @@ section {
 
 .testimonials .testimonial-item .quote-icon-left,
 .testimonials .testimonial-item .quote-icon-right {
-  color: #574CFA;
+  color: #47539F;
   font-size: 26px;
   line-height: 0;
 }
@@ -1824,7 +1824,7 @@ section {
   padding-right: 10px;
   font-size: 20px;
   line-height: 0;
-  color: #574cfa;
+  color: #47539F;
 }
 
 .faq .accordion-button:not(.collapsed) {
@@ -1907,7 +1907,7 @@ section {
 # Contact Section
 --------------------------------------------------------------*/
 .contact .info-container {
-  background-color: #574CFA;
+  background-color: #47539F;
   height: 100%;
   padding: 20px;
   border-radius: 10px 0 0 10px;
@@ -1916,7 +1916,7 @@ section {
 
 .contact .info-item {
   width: 100%;
-  background-color: #574CFA;
+  background-color: #47539F;
   margin-bottom: 20px;
   padding: 20px;
   border-radius: 10px;
@@ -2038,7 +2038,7 @@ section {
 }
 
 .contact .php-email-form button[type=submit] {
-  background: #574CFA;
+  background: #47539F;
   border: 0;
   padding: 14px 45px;
   color: #fff;
@@ -2794,9 +2794,9 @@ section {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid #574cfa;
+  border: 1px solid #47539F;
   font-size: 16px;
-  color: #574cfa;
+  color: #47539F;
   margin-right: 10px;
   transition: 0.3s;
 }
