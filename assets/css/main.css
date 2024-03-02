@@ -52,6 +52,198 @@ h6 {
   font-family: var(--font-primary);
 }
 
+
+
+/*--------------------------------------------------------------
+# Card & Banner
+--------------------------------------------------------------*/
+.card-row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* Kartları yatayda ortala */
+}
+
+.card-01 {
+  background: #fff;
+  position: relative;
+  flex: 1;
+  max-width: 250px;
+  height: 190px;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgb(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+.card-01 .card-image img {
+  margin: auto;
+  display: block;
+}
+
+.card-01 .card-text {
+  text-align: center;
+}
+
+.card-row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
+
+.card-01 {
+  background: #fff;
+  position: relative;
+  flex: 1;
+  max-width: 250px;
+  height: 190px;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgb(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+.card-02 {
+  background: #fff;
+  position: relative;
+  flex: 1;
+  max-width: 160px;
+  height: 68px;
+  margin: 10px;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgb(0, 0, 0, 0.2);
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+}
+
+.card-image {
+  margin-top: 10px;
+}
+
+.card-text {
+  text-align: center;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.testimonial-item p {
+  overflow: hidden;
+  /* Taşan içeriği gizler */
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  max-height: 350px;
+}
+
+.clients-slider img {
+  width: 150px;
+  height: 32px;
+}
+
+.custom-p {
+  font-size: 20pt;
+
+  text-align: center;
+  color: #1D1E1E;
+
+}
+
+.img-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.custom-img {
+  width: 570px;
+  height: 250px;
+}
+
+
+
+/*--------------------------------------------------------------
+# Card & Banner - Responsive
+--------------------------------------------------------------*/
+@media (max-width: 480px) {
+  .card-row {
+    flex-direction: column;
+  }
+
+  .common-card {
+    flex: 1;
+    max-width: calc(50% - 20px);
+    margin: 0 0 10px;
+    height: 190px;
+    /* Ya da istediğiniz bir yükseklik değeri */
+  }
+}
+
+@media (max-width: 800px) {
+  .card-01 {
+    flex: 100%;
+    max-width: 600px;
+  }
+
+  .card-02 {
+    flex: 100%;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-row {
+    flex-direction: column;
+  }
+
+  .common-card {
+    flex: 100%;
+    max-width: 100%;
+    margin: 0 0 10px;
+    height: 64px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-row {
+    flex-direction: column;
+  }
+
+  .card-01,
+  .card-02 {
+    flex: 100%;
+    max-width: 100%;
+    margin: 0 0 10px;
+    height: 64px;
+  }
+}
+
+
+
+
 /*--------------------------------------------------------------
 # Sections & Section Header
 --------------------------------------------------------------*/
@@ -809,12 +1001,25 @@ section {
 # Call To Action Section
 --------------------------------------------------------------*/
 .call-to-action .container {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cta-bg.jpg") center center;
-  background-size: cover;
+  /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cta-bg.jpg") center center; */
+  /* background-size: cover; */
   padding: 100px 60px;
   border-radius: 15px;
   overflow: hidden;
+  position: relative; /* Yeni eklenen resmin doğru konumlanması için */
 }
+
+/* Yeni eklenen stil */
+.call-to-action .container .cta-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Resmi arka plana göndermek için */
+}
+
 
 .call-to-action h3 {
   color: #fff;
@@ -832,7 +1037,7 @@ section {
   width: 94px;
   height: 94px;
   margin-bottom: 20px;
-  background: radial-gradient(var(--color-primary) 50%, rgba(0, 131, 116, 0.4) 52%);
+  background: radial-gradient(#574CFA 50%, rgba(100, 89, 200, 0.7) 52%);
   border-radius: 50%;
   display: inline-block;
   position: relative;
@@ -851,7 +1056,7 @@ section {
   animation-timing-function: steps;
   opacity: 1;
   border-radius: 50%;
-  border: 5px solid rgba(0, 131, 116, 0.7);
+  border: 5px solid rgba(100, 89, 200, 0.7);
   top: -15%;
   left: -15%;
   background: rgba(198, 16, 0, 0);
@@ -909,8 +1114,8 @@ section {
 }
 
 .call-to-action .cta-btn:hover {
-  background: var(--color-primary);
-  border: 2px solid var(--color-primary);
+  background: #574CFA;
+  border: 2px solid #574CFA;
 }
 
 @keyframes pulsate-btn {
