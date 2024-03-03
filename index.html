@@ -28,6 +28,15 @@
       /* Diğer stiller */
       display: none;
     }
+
+    .text-center {
+    text-align: center;
+  }
+
+  .load-more {
+    cursor: pointer;
+    color: #47539F; /* You can customize the color */
+  }
   </style>
   
 
@@ -698,7 +707,9 @@
       </div>
 
 
-      <button id="showAllBtn" onclick="showAllCards()">Hepsini Göster</button>
+      <div class="text-center">
+        <p class="load-more" style="color: #47539F;" id="load-more">Tüm Şirketleri Göster</p>
+      </div>
     </div>
   </section>
   <!-- ======= Sigorta Şirketleri ======= -->
@@ -934,27 +945,27 @@
 
 
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      // Başlangıçta ilk 4 kartı göster
-      var initialCards = document.querySelectorAll('.commonn-card');
-      for (var i = 0; i < 4; i++) {
-        initialCards[i].style.display = 'block';
+    let loadMoreBtn = document.querySelector('#load-more');
+    let boxes = [...document.querySelectorAll('.containerR .commonn-card')];
+    let currentItem = 4;
+  
+    // Initial display: Show the first 4 cards
+    for (let i = 0; i < currentItem; i++) {
+      boxes[i].style.display = 'inline-block';
+    }
+  
+    loadMoreBtn.onclick = () => {
+      // Display all remaining cards
+      for (let i = currentItem; i < boxes.length; i++) {
+        boxes[i].style.display = 'inline-block';
       }
-    });
   
-    function showAllCards() {
-      // Tüm kartları göstermek için gizli olan tüm kartları bul
-      var hiddenCards = document.querySelectorAll('.commonn-card.hidden');
-  
-      // Gizli olan tüm kartları göster
-      hiddenCards.forEach(function (card) {
-        card.style.display = 'block';
-      });
-  
-      // "Hepsini Göster" butonunu gizle
-      document.getElementById('showAllBtn').style.display = 'none';
+      // Hide the "Load More" button after displaying all cards
+      loadMoreBtn.style.display = 'none';
     }
   </script>
+  
+  
   
   
 
