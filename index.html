@@ -23,7 +23,13 @@
   <link href="assets/css/main.css" rel="stylesheet" />
  
 
-
+  <style>
+    .commonn-card {
+      /* Diğer stiller */
+      display: none;
+    }
+  </style>
+  
 
 </head>
 
@@ -581,25 +587,65 @@
             <div class="card-row">
 
 
-              <div class="common-card card-01">
+              <div class="commonn-card card-01">
                 <div class="card-image">
                   <img src="assets/img/Card/kasko-insurance.svg" style="filter: grayscale(100%);" alt="Resim" width="100" height="100">
                 </div>
               </div>
 
-              <div class="common-card card-01">
+              <div class="commonn-card card-01">
                 <div class="card-image">
                   <img src="assets/img/Card/kasko-insurance.svg" style="filter: grayscale(100%);" alt="Resim" width="100" height="100">
                 </div>
               </div>
 
-              <div class="common-card card-01">
+              <div class="commonn-card card-01">
                 <div class="card-image">
                   <img src="assets/img/Card/kasko-insurance.svg" style="filter: grayscale(100%);" alt="Resim" width="100" height="100">
                 </div>
               </div>
 
-              <div class="common-card card-01">
+              <div class="commonn-card card-01">
+                <div class="card-image">
+                  <img src="assets/img/Card/kasko-insurance.svg" style="filter: grayscale(100%);" alt="Resim" width="100" height="100">
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      
+
+      <div class="col-lg-12 order-3 order-lg-1 d-flex flex-column justify-content-center text-lg-start">
+
+        <div class="row justify-content-center mt-4">
+          <div class="containerR">
+
+            <div class="card-row">
+
+              <div class="commonn-card card-01">
+                <div class="card-image">
+                  <img src="assets/img/Card/kasko-insurance.svg" style="filter: grayscale(100%);" alt="Resim" width="100" height="100">
+                </div>
+              </div>
+
+              <div class="commonn-card card-01">
+                <div class="card-image">
+                  <img src="assets/img/Card/kasko-insurance.svg" style="filter: grayscale(100%);" alt="Resim" width="100" height="100">
+                </div>
+              </div>
+
+              <div class="commonn-card card-01">
+                <div class="card-image">
+                  <img src="assets/img/Card/kasko-insurance.svg" style="filter: grayscale(100%);" alt="Resim" width="100" height="100">
+                </div>
+              </div>
+
+              <div class="commonn-card card-01">
                 <div class="card-image">
                   <img src="assets/img/Card/kasko-insurance.svg" style="filter: grayscale(100%);" alt="Resim" width="100" height="100">
                 </div>
@@ -620,64 +666,25 @@
             <div class="card-row">
 
 
-              <div class="common-card card-01">
+              <div class="commonn-card card-01">
                 <div class="card-image">
                   <img src="assets/img/Card/kasko-insurance.svg" style="filter: grayscale(100%);" alt="Resim" width="100" height="100">
                 </div>
               </div>
 
-              <div class="common-card card-01">
+              <div class="commonn-card card-01">
                 <div class="card-image">
                   <img src="assets/img/Card/kasko-insurance.svg" style="filter: grayscale(100%);" alt="Resim" width="100" height="100">
                 </div>
               </div>
 
-              <div class="common-card card-01">
+              <div class="commonn-card card-01">
                 <div class="card-image">
                   <img src="assets/img/Card/kasko-insurance.svg" style="filter: grayscale(100%);" alt="Resim" width="100" height="100">
                 </div>
               </div>
 
-              <div class="common-card card-01">
-                <div class="card-image">
-                  <img src="assets/img/Card/kasko-insurance.svg" style="filter: grayscale(100%);" alt="Resim" width="100" height="100">
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-
-      <div class="col-lg-12 order-3 order-lg-1 d-flex flex-column justify-content-center text-lg-start">
-
-        <div class="row justify-content-center mt-4">
-          <div class="containerR">
-
-            <div class="card-row">
-
-
-              <div class="common-card card-01">
-                <div class="card-image">
-                  <img src="assets/img/Card/kasko-insurance.svg" style="filter: grayscale(100%);" alt="Resim" width="100" height="100">
-                </div>
-              </div>
-
-              <div class="common-card card-01">
-                <div class="card-image">
-                  <img src="assets/img/Card/kasko-insurance.svg" style="filter: grayscale(100%);" alt="Resim" width="100" height="100">
-                </div>
-              </div>
-
-              <div class="common-card card-01">
-                <div class="card-image">
-                  <img src="assets/img/Card/kasko-insurance.svg" style="filter: grayscale(100%);" alt="Resim" width="100" height="100">
-                </div>
-              </div>
-
-              <div class="common-card card-01">
+              <div class="commonn-card card-01">
                 <div class="card-image">
                   <img src="assets/img/Card/kasko-insurance.svg" style="filter: grayscale(100%);" alt="Resim" width="100" height="100">
                 </div>
@@ -690,6 +697,8 @@
 
       </div>
 
+
+      <button id="showAllBtn" onclick="showAllCards()">Hepsini Göster</button>
     </div>
   </section>
   <!-- ======= Sigorta Şirketleri ======= -->
@@ -923,6 +932,31 @@
   <div id="preloader"></div>
   <!-- End Açılış Animasyonu -->
 
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Başlangıçta ilk 4 kartı göster
+      var initialCards = document.querySelectorAll('.commonn-card');
+      for (var i = 0; i < 4; i++) {
+        initialCards[i].style.display = 'block';
+      }
+    });
+  
+    function showAllCards() {
+      // Tüm kartları göstermek için gizli olan tüm kartları bul
+      var hiddenCards = document.querySelectorAll('.commonn-card.hidden');
+  
+      // Gizli olan tüm kartları göster
+      hiddenCards.forEach(function (card) {
+        card.style.display = 'block';
+      });
+  
+      // "Hepsini Göster" butonunu gizle
+      document.getElementById('showAllBtn').style.display = 'none';
+    }
+  </script>
+  
+  
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
